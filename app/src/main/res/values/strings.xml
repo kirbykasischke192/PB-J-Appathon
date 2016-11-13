@@ -4,4 +4,49 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="radio_button1">
+        <item>You like Muscle Cars:OldFashioned</item>
+        <item>You wear all the brand-name clothes:TheElvis</item>
+        <item>You are a conversation-starter:PBJSriracha</item>
+        <item>You are a fan of healthy foods:PBFruit</item>
+        <item>You haven\'t showered in a month:PBFruit</item>
+        <item>You are confident:TheElvis</item>
+        <item>You desire to live in a high-rise/penthouse condo:DoubleDecker</item>
+        <item>You are a dreamer:DeepFried</item>
+        <item>You have tons of Bling:TheElvis</item>
+        <item>You stockpile things that you like:DoubleDecker</item>
+        <item>You appreciate tried-and-true methods of doing things:OldFashioned</item>
+        <item>You feel uncomfortable when you are in a boring situation:PBJSriracha</item>
+    </string-array>
+
+    <string-array name="radio_button2">
+        <item>You find camping very enjoyable:PBFruit</item>
+        <item>You are a collector:DoubleDecker</item>
+        <item>You like classic music:OldFashioned</item>
+        <item>You are an innovator:DeepFried</item>
+        <item>You are outgoing/extroverted:PBJSriracha</item>
+        <item>You like to fix things when they break:DeepFried</item>
+        <item>You consider yourself a fan of nature:PBFruit</item>
+        <item>You love being in the limelight:TheElvis</item>
+        <item>You upgrade your fast-food meals to large:DoubleDecker</item>
+        <item>You \"fake it \'til you make it\":TheElvis</item>
+        <item>You try to add excitement to every moment:PBJSriracha</item>
+        <item>You are a \"game-changer\":DeepFried</item>
+    </string-array>
+
+    <string-array name="radio_button3">
+        <item>You put hot sauce on everything:PBJSriracha</item>
+        <item>You use a flip phone:OldFashioned</item>
+        <item>You don\'t buy anything that isn\'t labeled \"all-natural\":PBFruit</item>
+        <item>You \"strut your stuff\":TheElvis</item>
+        <item>You always \"treat yo self\":DoubleDecker</item>
+        <item>You decorate in vivid colors:PBJSriracha</item>
+        <item>You always think about how things can be improved:DeepFried</item>
+        <item>You prefer the nature trail to the mall:PBFruit</item>
+        <item>You firmly believe \"it if ain\'t broke, don\'t fix it\":OldFashioned</item>
+        <item>You have a very active mind:DeepFried</item>
+        <item>You think that kids these days need to play outside more:OldFashioned</item>
+        <item>You upgrade to new technology right when it comes out:DoubleDecker</item>
+    </string-array>
 </resources>
