@@ -1,12 +1,20 @@
 package com.example.kirby.pbharmony;
 
 import android.content.Context;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import static com.example.kirby.pbharmony.R.drawable.old_fashioned;
+import static com.example.kirby.pbharmony.R.id.image;
+import static com.example.kirby.pbharmony.R.id.imageView;
 
 
 /**
@@ -24,8 +32,12 @@ public class ResultFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String maxGroup;
+    private TextView textViewT;
+    private ImageView imageView;
+    private TextView textViewB;
+    private Button retryBtn;
 
-//    private OnFragmentInteractionListener mListener;
+    //private OnFragmentInteractionListener mListener;
 
     public ResultFragment() {
         // Required empty public constructor
@@ -59,21 +71,61 @@ public class ResultFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result, container, false);
+        View view = inflater.inflate(R.layout.fragment_result, container, false);
+        String result = "";
+        textViewT = (TextView)view.findViewById(R.id.textView4);
+        imageView = (ImageView)view.findViewById(R.id.imageView2);
+        textViewB = (TextView)view.findViewById(R.id.textView5);
+        retryBtn = (Button)view.findViewById(R.id.button3);
+        if (maxGroup.equals("OldFashioned")) {
+            result = "The Old-Fashioned";
+            imageView.setImageResource(R.drawable.old_fashioned);
+            textViewB.setText(R.string.OldFashioned);
+        } else if (maxGroup.equals("PBFruit")) {
+            result = "The PB and Fruit";
+            textViewB.setText(R.string.PBFruit);
+            imageView.setImageResource(R.drawable.pb_and_fruit);
+        } else if (maxGroup.equals("TheElvis")) {
+            result = "The Elvis";
+            textViewB.setText(R.string.TheElvis);
+            imageView.setImageResource(R.drawable.the_elvis);
+        } else if (maxGroup.equals("DeepFried")) {
+            result = "The Deep-Fried PB&J";
+            textViewB.setText(R.string.DeepFried);
+            imageView.setImageResource(R.drawable.fried_pb_and_j);
+        } else if (maxGroup.equals("DoubleDecker")) {
+            result = "The Double-Decker";
+            textViewB.setText(R.string.DoubleDecker);
+            imageView.setImageResource(R.drawable.double_decker);
+        } else {
+            result = "The PB Sriracha and J";
+            textViewB.setText(R.string.PBJSriracha);
+            imageView.setImageResource(R.drawable.pb_sriracha);
+        }
+        textViewT.setText("Your Match: " + result);
+        result = "";
+//        retryBtn.setOnClickListener(View. {
+//            StartFragment startFragment = new StartFragment():
+//            onButtonPressed(startFragment);
+//        });
+
+        return view;
+
+
     }
 //
 //    // TODO: Rename method, update argument and hook method into UI event
-//    public void onButtonPressed(Uri uri) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(uri);
-//        }
+//public void onButtonPressed(Fragment fragment) {
+//    if (mListener != null) {
+//        mListener.onNextFragment(fragment);
 //    }
+//}
 //
 //    @Override
 //    public void onAttach(Context context) {
 //        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
+//        if (context instanceof StartFragment.OnFragmentInteractionListener) {
+//            mListener = (StartFragment.OnFragmentInteractionListener) context;
 //        } else {
 //            throw new RuntimeException(context.toString()
 //                    + " must implement OnFragmentInteractionListener");
@@ -98,6 +150,6 @@ public class ResultFragment extends Fragment {
 //     */
 //    public interface OnFragmentInteractionListener {
 //        // TODO: Update argument type and name
-//        void onFragmentInteraction(Uri uri);
+//        void onNextFragment(Fragment fragment);
 //    }
 }

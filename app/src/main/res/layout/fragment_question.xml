@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_margin="8dp"
     tools:context="com.example.kirby.pbharmony.QuestionFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -40,10 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/radioGroup"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
         android:layout_marginTop="56dp"

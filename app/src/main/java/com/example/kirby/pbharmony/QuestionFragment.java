@@ -170,7 +170,7 @@ public class QuestionFragment extends Fragment {
                 mListener.onContinue(resultFrag);
             }
         }else{
-            Toast.makeText(getActivity(), "Choice a trait!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Choose a trait!", Toast.LENGTH_SHORT).show();
         }
 
     }
