@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteY="144dp"
             tools:layout_editor_absoluteX="8dp"
-            android:id="@+id/radioButton" />
+            android:id="@+id/radioButton1" />
 
         <RadioButton
             android:text="RadioButton"
@@ -84,7 +84,7 @@
         android:text="Continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/continue_btn"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

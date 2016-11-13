@@ -5,8 +5,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioButton;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -18,18 +22,19 @@ import java.util.HashMap;
  * create an instance of this fragment.
  */
 public class QuestionFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
 //    private OnFragmentInteractionListener mListener;
 
-    HashMap<String,Integer> sandwichChoices;
+    Map<String,Integer> sandwichChoices;
+    Button continueBtn;
+    int indexCounter = 0;
+    RadioButton radioOne;
+    RadioButton radioTwo;
+    RadioButton radioThree;
+    //Each List is the same size
+    List<String> radioBtnOneQuestions;
+    List<String> radioBtnTwoQuestions;
+    List<String> radioBtnThreeQuestions;
     public QuestionFragment() {
         // Required empty public constructor
     }
@@ -38,27 +43,16 @@ public class QuestionFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment QuestionFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static QuestionFragment newInstance(String param1, String param2) {
-        QuestionFragment fragment = new QuestionFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static QuestionFragment newInstance() {
+        return new QuestionFragment();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -66,17 +60,41 @@ public class QuestionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_question, container, false);
+        //Add all the Possible choices
+        //Init Stuff
+        sandwichChoices = new HashMap<>();
         sandwichChoices.put("OldFashioned",0);
         sandwichChoices.put("PBFruit",0);
         sandwichChoices.put("TheElvis",0);
         sandwichChoices.put("DeepFried",0);
         sandwichChoices.put("DoubleDecker",0);
         sandwichChoices.put("PBJSriracha",0);
-//        int[] results = {R.drawable.main_screen_image};
-//        sandwichChoices.put("Orig-pic",R.drawable.main_screen_image);
+
+        continueBtn = (Button)view.findViewById(R.id.continue_btn);
+        radioOne = (RadioButton)view.findViewById(R.id.radioButton1);
+        radioTwo = (RadioButton)view.findViewById(R.id.radioButton2);
+        radioThree = (RadioButton)view.findViewById(R.id.radioButton3);
+
+        continueBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateRadioButtons();
+            }
+        });
         return view;
     }
 
+
+    public void updateRadioButtons(){
+        if(indexCounter < radioBtnOneQuestions.size()){
+
+            indexCounter++;
+        }else{
+            //Change Fragment to results Fragment.
+
+        }
+
+    }
 //    // TODO: Rename method, update argument and hook method into UI event
 //    public void onButtonPressed(Uri uri) {
 //        if (mListener != null) {
