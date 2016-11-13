@@ -1,6 +1,7 @@
 package com.example.kirby.pbharmony;
 
 import android.os.Bundle;
+import android.support.annotation.BoolRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -14,7 +15,9 @@ import android.widget.Button;
 
 public class StartQuizActivity extends AppCompatActivity implements
         StartFragment.OnFragmentInteractionListener,
-        QuestionFragment.OnQuestionInteractionListener {
+        QuestionFragment.OnQuestionInteractionListener,
+        ResultFragment.OnFragmentInteractionListener
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,21 +61,23 @@ public class StartQuizActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
-    public void changeFragment(Fragment fragment){
+    public void changeFragment(Fragment fragment, Boolean useBack){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);
-        transaction.addToBackStack(null);
+        if(useBack) {
+            transaction.addToBackStack(null);
+        }
         transaction.commit();
 
     }
 
     @Override
     public void onNextFragment(Fragment fragment) {
-        changeFragment(fragment);
+        changeFragment(fragment, false);
     }
 
     @Override
     public void onContinue(Fragment fragment) {
-        changeFragment(fragment);
+        changeFragment(fragment, true);
     }
 }
