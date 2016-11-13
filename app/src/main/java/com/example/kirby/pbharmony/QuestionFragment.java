@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -17,7 +18,7 @@ import java.util.HashMap;
  * Use the {@link QuestionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QuestionFragment extends Fragment {
+public class  QuestionFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +30,7 @@ public class QuestionFragment extends Fragment {
 
 //    private OnFragmentInteractionListener mListener;
 
-    HashMap<String,Integer> sandwichChoices;
+    Map<String,Integer> sandwichChoices;
     public QuestionFragment() {
         // Required empty public constructor
     }
@@ -66,6 +67,7 @@ public class QuestionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_question, container, false);
+        sandwichChoices = new HashMap<>();
         sandwichChoices.put("OldFashioned",0);
         sandwichChoices.put("PBFruit",0);
         sandwichChoices.put("TheElvis",0);
