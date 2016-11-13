@@ -12,7 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class StartQuizActivity extends AppCompatActivity implements StartFragment.OnFragmentInteractionListener {
+public class StartQuizActivity extends AppCompatActivity implements
+        StartFragment.OnFragmentInteractionListener,
+        QuestionFragment.OnQuestionInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,11 @@ public class StartQuizActivity extends AppCompatActivity implements StartFragmen
 
     @Override
     public void onNextFragment(Fragment fragment) {
+        changeFragment(fragment);
+    }
+
+    @Override
+    public void onContinue(Fragment fragment) {
         changeFragment(fragment);
     }
 }
