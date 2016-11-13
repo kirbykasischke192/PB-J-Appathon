@@ -5,6 +5,47 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="main_screen_intro">Welcome to PBHarmony! Are you looking for your PB and J soul-
+        mate? Well look no further! Take the personality survey, and let PBHarmony make your PB and
+        J match!</string>
+
+    <string name="OldFashioned">Your soul-sandwich is the basic, yet delicious peanut butter and
+        jelly. Simpler can be better in some cases, and you realize that. Sometimes, the old but
+        tested ways of doing things can get the job done, and the standard PB and J is a prime
+        example.
+    </string>
+
+    <string name="PBFruit">As someone who enjoys nature and being outdoors, or just being completely
+        untamed, you like to bring your love of nature into many aspects of your life, including
+        into your PB and J\'s. Take out the jelly, substitute it for fruit, and what you are left
+        with is a wholesome sandwich with a freshness that can only come from the mother nature her
+        self.
+    </string>
+
+    <string name="TheElvis">You know you are styling on a regular basis, and welcome the fact that
+        all eyes are on you throughout the day. Let the world know you deserve all the attention by
+        whipping up a grilled peanut butter, banana, and bacon sandwich, similar to the sandwich
+        that Elvis so often enjoyed.
+    </string>
+
+    <string name="DeepFried">Thinking outside of the box is your specialty. You show your creative
+        intuition when you come up with ways to improve anything and everything around you. What
+        could be a more creative improvement to a PB and J than deep-frying it? Come to think of it,
+        how many things in this world aren\'t improved upon when you fry them?
+    </string>
+
+    <string name="DoubleDecker">As the title of this sandwich suggests, you are livin\' large. You
+        dwell in excess. It\'s how you live your life and you wouldn\'t choose any other way of
+        living. Naturally, you are a perfect match for this super-sized rendition of the tasty PB
+        and J.
+    </string>
+
+    <string name="PBJSriracha">It\'s safe to say that you are far from bland. You are one who wants
+        socialize and make exciting things happen around you for own amusement. Your sandwich is
+        involves an exciting twist to an all-time classics, which is the addition of arguably the
+        highest-rated hot sauce in our day and age: Sriracha!
+    </string>
+
     <string-array name="radio_button1">
         <item>You like Muscle Cars:OldFashioned</item>
         <item>You wear all the brand-name clothes:TheElvis</item>
