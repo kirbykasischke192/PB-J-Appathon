@@ -1,12 +1,12 @@
 package com.example.kirby.pbharmony;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.HashMap;
 
 
 /**
@@ -29,6 +29,7 @@ public class QuestionFragment extends Fragment {
 
 //    private OnFragmentInteractionListener mListener;
 
+    HashMap<String,Integer> sandwichChoices;
     public QuestionFragment() {
         // Required empty public constructor
     }
@@ -64,7 +65,16 @@ public class QuestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question, container, false);
+        View view = inflater.inflate(R.layout.fragment_question, container, false);
+        sandwichChoices.put("OldFashioned",0);
+        sandwichChoices.put("PBFruit",0);
+        sandwichChoices.put("TheElvis",0);
+        sandwichChoices.put("DeepFried",0);
+        sandwichChoices.put("DoubleDecker",0);
+        sandwichChoices.put("PBJSriracha",0);
+//        int[] results = {R.drawable.main_screen_image};
+//        sandwichChoices.put("Orig-pic",R.drawable.main_screen_image);
+        return view;
     }
 
 //    // TODO: Rename method, update argument and hook method into UI event
