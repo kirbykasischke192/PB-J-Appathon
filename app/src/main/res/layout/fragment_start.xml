@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="279dp"
         android:layout_height="190dp"
-        android:text="@string/hello_blank_fragment"
+        android:text="Gonna put stuff here"
         android:padding="15dp"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
